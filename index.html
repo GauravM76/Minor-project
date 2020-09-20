@@ -51,10 +51,10 @@
     <div class="rule_nav">
         <span class="rulesnav ,position2, rborder">
             <ul>
-                <a onclick="document.getElementById('id03').style.display='block'" style="width:auto"><li><u>Cards Rules</u></li></a>
-                <a onclick="document.getElementById('id04').style.display='block'" style="width:auto"><li><u>Hitting Rules</u></li></a>
-                <a onclick="document.getElementById('id05').style.display='block'" style="width:auto"><li><u>standing Rules</u></li></a>
-                <a onclick="document.getElementById('id06').style.display='block'" style="width:auto"><li><u>surrender</u></li></a>
+                <a onclick="document.getElementById('id03').style.display='block'" style="width:auto" class="myhover"><li><u>Cards Rules</u></li></a> <br>
+                <a onclick="document.getElementById('id04').style.display='block'" style="width:auto" class="myhover"><li><u>Hitting Rules</u></li></a> <br>
+                <a onclick="document.getElementById('id05').style.display='block'" style="width:auto" class="myhover"><li><u>standing Rules</u></li></a> <br>
+                <a onclick="document.getElementById('id06').style.display='block'" style="width:auto" class="myhover"><li><u>surrender</u></li></a> <br>
             </ul>
         </span>
         <span class="rules">
@@ -114,8 +114,8 @@
 			</div>
 			<button type="submit" class="loginbtn"> Login </button>
             <button onclick="document.getElementById('id01').style.display='none'"  class="cancelbtn" >Cancel </button><br>
-            <u><a class="regi-position" onclick="document.getElementById('id02').style.display='block'"
-                style="width:auto; color: red;" >If not register, click here!</a></u>
+            <u><a class="regi-position" onclick="document.getElementById('id02').style.display='block'" onclick="document.getElementById('id01').style.display='none'" 
+                 >If not register, click here!</a></u>
 
 		</form>
 	</div>
@@ -140,10 +140,97 @@
 				<input type="password" placeholder="Enter your password" name="password" required><br><br>
 			</div>
 			<button type="submit" class="loginbtn"> Login </button>
-			<button type="button" class="cancelbtn">cancel </button><br>
+			<button onclick="document.getElementById('id02').style.display='none'" type="button" class="cancelbtn">cancel </button><br>
 		</form>
     </div>
-    
+
+    <div id="id03" class="cards-rules">
+        <div class="cards-rules-content">
+            <div class="close-sign">
+                <span onclick="document.getElementById('id03').style.display='none'" title="Close Modal"class="close">
+                    &times;
+                </span> </div>
+
+            
+            <h1 style="font-size: 60px ;">    Card Rules</h1>
+            <img src="WebPhotos\card-value.png" alt="card_value" class="rules_img"> 
+            <p style="font-size: 28px; "> 
+                All cards count their face value in blackjack. Picture cards count as 10 and the ace can count as either 1 or 11.
+                Card suits have no meaning in blackjack. The total of any hand is the sum of the card values in the hand. A hand
+                containing a 4-5-8 totals 17. Another containing a queen-5 totals 15. It is always assumed that the ace counts as
+                11 unless so doing would make your hand total exceed 21, in which case the ace reverts to a value of 1.
+            </p>
+        </div>
+
+        
+
+    </div>
+
+    <div id="id04" class="cards-rules">
+        <div class="cards-rules-content">
+            <div class="close-sign">
+                <span onclick="document.getElementById('id04').style.display='none'" title="Close Modal"class="close">
+                    &times;
+                </span> </div>
+
+            
+            <h1 style="font-size: 60px ;">    Hitting Rules</h1>
+            <img src="WebPhotos\Hit.png" alt="card_value" class="rules_img"> 
+            <p style="font-size: 28px; "> 
+                This means you want the dealer to give another card to your hand. In shoe games, indicate to the dealer that you want a hit by making a beckoning motion with your finger or tapping the table behind your cards with your finger. In hand-held games, scratch the edges of the cards in your hand lightly on the felt
+            </p>
+        </div>
+
+        
+
+    </div>
+
+    <div id="id05" class="cards-rules">
+        <div class="cards-rules-content">
+            <div class="close-sign">
+                <span onclick="document.getElementById('id05').style.display='none'" title="Close Modal"class="close">
+                    &times;
+                </span> </div>
+
+            
+            <h1 style="font-size: 60px ;">    Standing Rules</h1>
+            <img src="WebPhotos\Stand.png" alt="card_value" class="rules_img"> 
+            <p style="font-size: 28px; "> 
+                This means you are satisfied with the total of the hand and want to stand with the cards you have. In shoe games, indicate that you want to stand by waving your hand over the cards, palm down. In hand-held games, tuck your cards under the chips that you have in the betting box.
+                
+            </p>
+        </div>
+
+        
+
+    </div>
+
+    <div id="id06" class="cards-rules">
+        <div class="cards-rules-content">
+            <div class="close-sign">
+                <span onclick="document.getElementById('id06').style.display='none'" title="Close Modal"class="close">
+                    &times;
+                </span> </div>
+
+            
+            <h1 style="font-size: 60px ;">    Surrender</h1>
+            <img src="WebPhotos\Surrender.png" alt="card_value" class="rules_img"> 
+            <p style="font-size: 28px; "> 
+                This playing option is sometimes permitted. It allows a player to forfeit the hand immediately with an automatic loss of half the original bet. In most venues, players can surrender their initial two-card hand only after the dealer has checked his cards and ascertained that he doesn’t have a blackjack (known as late surrender). Once a player draws a card, the surrender option is no longer available. If the dealer has a blackjack hand, then surrender is not available.
+            </p>
+        </div>
+
+        
+
+    </div>
+    <footer>
+        <p>Contact information:</p>
+             <a href="mailto:kanishkkargutkar123@gmail.com">someone@example.com</a> |
+             <a href="mailto:marathegaurav364@gmail.com">someone@example.com</a> |
+             <a href="mailto:kawaleaditya870@gmail.com">someone@example.com</a> |
+             <a href="mailto:mishradhruv072@gmail.com">someone@example.com</a>
+             <p></p>
+      </footer>
     <script>
 		var modal1 = document.getElementById('id01');
 		var modal2 = document.getElementById('id02');
@@ -161,7 +248,22 @@
     if (event.target == modal2) {
         modal2.style.display = "none";
     }
-
+    window.onclick = function(event) {
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal4) {
+        modal4.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal5) {
+        modal5.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal6) {
+        modal6.style.display = "none";
+    }
 	</script>
 
 
