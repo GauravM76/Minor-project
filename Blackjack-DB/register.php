@@ -12,7 +12,7 @@ $connect = mysqli_connect("localhost","root","","blackjackUD"); # connection to 
 //     echo " ERROR NOT CONNECTED";
 // } # just  to check the connection between php and data  base to verify the connectionp;
 $n=$_POST['nm'];# name of the user using for the login 
-$p=$_POST['userpassword']; # PASSWORD user for the login
+$p=$_POST['userpasswrord']; # PASSWORD user for the login
 $a=$_POST['address'];
 
 $n= mysqli_real_escape_string($connect,$n);# to prevent from sql injection secured form
@@ -32,15 +32,15 @@ $a= mysqli_real_escape_string($connect,$a);# to prevent from sql injection secur
  $emailcount = mysqli_num_rows($email);
   
 
-$insert = "SELECT * from user_details where user_name = '$n' && user_password = '$p' && user_address = '$a' "; # query to chek the record exist or not in the databse
+$insert = " SELECT * from user_details where user_name = '$n'&& user_password = '$p' && user_address = '$a' "; # query to chek the record exist or not in the databse
 $result = mysqli_query($connect,$insert) ; 
 $check_rows = mysqli_num_rows($result); # check the no of rows in the database
 
 if($emailcount > 0 )
 {
     echo "<script> 
-    alert('E-mail already exists! Please enter a new E-mail. ')
-    location.href='../index.php' 
+    alert('E-mail already Registered ')
+    location.href='register.html' 
     </script>"; 
 // echo " test if mail exists";
 }
@@ -51,10 +51,14 @@ elseif ($nuser > 0)
     // echo " user name exist";
     
     echo "<script> 
-            alert('Username alredy exist! Please enter a unique Username!);
-            location.href='../index.php'; 
+            alert('Username Alredy Exist');
+            location.href='register.html'; 
             </script>";
     //   //header('location:login.html');
+
+ 
+
+
  }
 
  else
@@ -68,12 +72,16 @@ elseif ($nuser > 0)
      
     echo "<script> 
             alert('REGISTERED')
-            location.href='../index.php';
-            </script>";
+            location.href='login.html' 
+            </script>"; 
 
     // echo "registerd";
             
             //header('location:login.html');
     
 }
+
+
+
+
 ?>
